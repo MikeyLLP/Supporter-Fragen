@@ -86,7 +86,7 @@ function downloadCounters() {
     textContent += `| Counter für Box 4: ${counter4}\n`; // Falls weitere Boxen hinzugefügt werden    +1 box machen wen bennötigt
 /* --------------------------------------------------------------------------------------------- */
     textContent += `+---------------------------------------+\n`;
-    textContent += `| Erstellt am: ${formattedTimestamp}       |\n`;
+    textContent += `| Erstellt am: ${formattedTimestamp}      |\n`;
     textContent += `+---------------------------------------+\n`;
 
     // Erstelle ein Blob mit dem Textinhalt
