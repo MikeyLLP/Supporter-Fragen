@@ -120,7 +120,7 @@ function downloadCounters() {
 
 function resetCounters() {
     // Bestätigungsdialog anzeigen
-    if (confirm('Möchten Sie wirklich alle Counter zurücksetzen?')) {
+    if (confirm('Möchten du wirklich alle Counter zurücksetzen?')) {
         localStorage.removeItem('counter1');
         localStorage.removeItem('counter2');
         localStorage.removeItem('counter3');
@@ -135,7 +135,7 @@ function resetCounters() {
         counter4 = 0; // Falls weitere Boxen hinzugefügt werden +1 box machen wen bennötigt
         /* --------------------------------------------------------------------------------------------- */
         displayCounters();
-
+        
         // Ändere den Reset-Button-Stil nach dem Klicken
         document.getElementById('resetButton').style.backgroundColor = '#4caf50'; // Grün einfärben
         setTimeout(function() {
