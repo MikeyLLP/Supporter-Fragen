@@ -1,17 +1,25 @@
-const cookieBox = document.querySelector(".wrapper"),
-  acceptBtn = cookieBox.querySelector(".buttons button");
+const cookieBox = document.querySelector(".wrapper");
+const acceptBtn = cookieBox.querySelector(".buttons button");
 
 acceptBtn.onclick = () => {
-    //cookie wird automatisch verlängert
-  document.cookie = "CookieBy=MikeyLLP; max-age="+60*60*24*30
-  if(document.cookie){ //wen cookie akzeptiert wird
-    cookieBox.classList.add("hide"); //löscht die cookie box
-  }else{
-    alert("Cookie kann nicht gesetzt werden");//cookie error
+  // automatische cookie verlängerung
+  document.cookie = "CookieBy=MikeyLLP; max-age=" + (60 * 60 * 24 * 30);
+
+  // Überprüfen, ob das Cookie gesetzt wurde
+  let checkCookie = document.cookie.includes("CookieBy=MikeyLLP");
+
+  if (checkCookie) {
+    cookieBox.classList.add("hide"); // verstekt die cookiebox wen jemmand akzeptiert
+  } else {
+    alert("Cookie kann nicht gesetzt werden"); // Error wen cookies nicht akzeptiert werden
   }
 };
-let checkCookie = document.cookie.indexOf("CookieBy=MikeyLLP"); //schaut ob cookies akzeptiert wurde
-checkCookie != -1 ? cookieBox.classList.add("hide"): cookieBox.classList.add("hide");
+
+//automatischer cookie schek
+if (document.cookie.includes("CookieBy=MikeyLLP")) {
+  cookieBox.classList.add("hide");
+}
+
 /* --------------------------------------------------------------------------------------------- */
 // Initialisierung der Counter-Variablen aus dem Local Storage oder standardmäßig auf 0
 let counter1 = parseInt(localStorage.getItem('counter1')) || 0;
