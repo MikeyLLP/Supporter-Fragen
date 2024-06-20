@@ -5,9 +5,24 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Fragen</title>
             <link rel="stylesheet" href="style.css"> <!-- cmd Ipconfig Ipv-4 einsetzen für sinc oder durch standart ip ersetzen 127.0.0.1-->
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            
         </head>
         <body>
+
+            <div class="wrapper"> 
+                <div class="content">
+                  <header>Einwilligung zu Cookies</header>
+                  <p>
+                    Diese Webseite verwendet Cookies zur Verbesserung der Nutzererfahrung.
+                    Durch die Nutzung der Webseite stimmst du der Verwendung von Cookies zu.
+                  </p>
+                  <div class="buttons">
+                    <button class="item">Ich akzeptiere!</button>
+                    <a href="#">Mehr erfahren</a>
+                  </div>
+                </div>
+              </div>
+
             <div class="container">
                 <div class="box" onclick="toggleText(1)">
                     Wann welche Events
@@ -35,14 +50,14 @@
                     <span class="counter" id="counter1">0</span>
                 </div>
                 <div class="text-box" id="textBox2">
-                    <H1>Wie sieht eine Op-Fishing Rod aus?</H1>
+                    <H1 class="überschrift">Wie sieht eine Op-Fishing Rod aus?</H1>
                     <hr class="linie">
                     <p id="textToCopy2" class="texte">Eine Op-Fishing Rod besteht aus Unbraking 3 ,Luck of the see 3 ,Lure 3 ,Mending...</p>
                     <button class="copy-button" onclick="copyText('textToCopy2', this)">Text kopieren</button>
                     <span class="counter" id="counter2">0</span>
                 </div>
                 <div class="text-box" id="textBox3">
-                    <H1>Warum keine Villager?</H1>
+                    <H1 class="überschrift">Warum keine Villager?</H1>
                     <hr class="linie">
                     <p id="textToCopy3" class="texte">Auf dem Server gibt es keine Villager, weil sie viel zu OP sind und man durch sie zu schnell 
                         an alle benötigten Items kommt. Das würde den Spaß am Spiel nehmen.</p>
@@ -51,7 +66,7 @@
                 </div>
                 <!---------------------------------------------------------------------------------------------------------------------------->
                 <div class="text-box" id="textBox4">
-                    <H1>Was ist Experience?</H1>
+                    <H1 class="überschrift">Was ist Experience?</H1>
                     <hr class="linie">
                     <p id="textToCopy4" class="texte">Text für Box 4, den du kopieren kannst.</p>
                     <button class="copy-button" onclick="copyText('textToCopy4', this)">Text kopieren</button> <!--Schrit 2 funktionen hinzufügen +1 box machen wen bennötigt -->

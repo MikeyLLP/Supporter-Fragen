@@ -1,4 +1,10 @@
-/* Allgemeine Styles */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
 body {
     background-color: #2f3136;
     font-family: Arial, Helvetica, sans-serif;
@@ -131,10 +137,12 @@ body {
 h1.überschrift{
    font-size: 35px;
    color:white;
+   margin: 10px;
 }
 p.texte{
     font-size: 18px;
     color:white;
+    margin: 10px;
 
 }
 hr.linie{
@@ -150,4 +158,52 @@ hr.linie{
   'GRAD' 0,
   'opsz' 26
 }
-
+.wrapper{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background-color: #ffffff;
+    max-width: 365px;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    padding: 25px 25px 30px 25px;
+}
+.wrapper.hide{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3 ease;
+}
+.wrapper .content{
+    margin-top: 10px;
+}
+.content header{
+    font-size: 25px;
+    font-weight: 600;
+}
+.content p {
+    color: #858585;
+    margin: 5px 0 20px 0;
+}
+.content .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons .item{
+    margin: 0 10px;
+}
+.buttons button{
+    padding: 10px 20px;
+    background: #2a6bf6;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.buttons a{
+    color: #2a6bf6;
+}

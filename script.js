@@ -1,3 +1,17 @@
+const cookieBox = document.querySelector(".wrapper"),
+  acceptBtn = cookieBox.querySelector(".buttons button");
+
+acceptBtn.onclick = () => {
+    //cookie wird automatisch verlängert
+  document.cookie = "CookieBy=MikeyLLP; max-age="+60*60*24*30
+  if(document.cookie){ //wen cookie akzeptiert wird
+    cookieBox.classList.add("hide"); //löscht die cookie box
+  }else{
+    alert("Cookie kann nicht gesetzt werden");//cookie error
+  }
+};
+let checkCookie = document.cookie.indexOf("CookieBy=MikeyLLP"); //schaut ob cookies akzeptiert wurde
+checkCookie != -1 ? cookieBox.classList.add("hide"): cookieBox.classList.add("hide");
 /* --------------------------------------------------------------------------------------------- */
 // Initialisierung der Counter-Variablen aus dem Local Storage oder standardmäßig auf 0
 let counter1 = parseInt(localStorage.getItem('counter1')) || 0;
