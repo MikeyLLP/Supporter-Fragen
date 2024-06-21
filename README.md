@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-  <html lang="de">
-    <head>
-      <meta charset="UTF-8">
-      <titel>Readme</titel>
-    </head>
-    <body>
-      <h1>Was ist das für ein Projekt</h1>
-      <h2>Wichtig!!! Ich hafte für nichts den ich nutze Google Fonts</h2>
-      <p>Dieses Projekt ist ein Privates projekt das sachen austesten möchte um für einen minecraft Server</p>
-      <p>so schnell wie möglich antworten Zu können</p>
-    </body>
-  </html>
+# Supporter-Fragen Archive
+
+**Projektname:** Supporter-Fragen Archive
+
+**Projektbeschreibung:** Es ist ein Archiv für Fragen, die die Supporter beantworten, so dass man nicht immer wieder neue Fragen tippen muss.
+
+## Installation
+
+Noch unbekannt.
+
+## Verwendung
+
+Noch unbekannt.
+
+## Beitrag
+
+Dies ist ein privates Projekt. Verbesserungsvorschläge werden angenommen.
+
+## Lizenz
+
+Das Projekt steht unter einer privaten Lizenz.
+
+## Kontakt
+
+Für Fragen oder Feedback kontaktieren Sie mich bitte über GitHub oder meinen Instagram-Account.
+
+## Wichtiger Hinweis
+
+Dieses Projekt nutzt Google Fonts. Ich übernehme keine Haftung für Copyright-Rechte.
