@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
     *{
         box-sizing: border-box;
     }
@@ -205,4 +205,8 @@ hr.linie{
 }
 .buttons a{
     color: #2a6bf6;
+}
+.icons-download, .icons-reset{
+    width: 30px;  
+    height: 30px; 
 }
