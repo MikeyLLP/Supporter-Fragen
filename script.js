@@ -1,5 +1,5 @@
-const cookieBox = document.querySelector(".wrapper");
-const acceptBtn = cookieBox.querySelector(".buttons button");
+const betaBox = document.querySelector(".wrapper");
+const acceptBtn = betaBox.querySelector(".buttons button");
 
 acceptBtn.onclick = () => {
   // automatische cookie verlängerung
@@ -9,7 +9,7 @@ acceptBtn.onclick = () => {
   let checkCookie = document.cookie.includes("CookieBy=MikeyLLP");
 
   if (checkCookie) {
-    cookieBox.classList.add("hide"); // verstekt die cookiebox wen jemmand akzeptiert
+    betaBox.classList.add("hide"); // verstekt die cookiebox wen jemmand akzeptiert
   } else {
     alert("Cookie kann nicht gesetzt werden"); // Error wen cookies nicht akzeptiert werden
   }
@@ -17,9 +17,8 @@ acceptBtn.onclick = () => {
 
 //automatischer cookie schek
 if (document.cookie.includes("CookieBy=MikeyLLP")) {
-  cookieBox.classList.add("hide");
+    betaBox.classList.add("hide");
 }
-
 /* --------------------------------------------------------------------------------------------- */
 // Initialisierung der Counter-Variablen aus dem Local Storage oder standardmäßig auf 0
 let counter1 = parseInt(localStorage.getItem('counter1')) || 0;
