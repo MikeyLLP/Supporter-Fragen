@@ -23,7 +23,3 @@ Das Projekt steht unter einer privaten Lizenz.
 ## Kontakt
 
 Für Fragen oder Feedback kontaktieren Sie mich bitte über GitHub oder meinen Instagram-Account.
-
-## Wichtiger Hinweis
-
-Dieses Projekt nutzt Google Fonts. Ich übernehme keine Haftung für Copyright-Rechte.
