@@ -40,6 +40,9 @@
                     Was ist Experience
                 </div>
                 <!---------------------------------------------------------------------------------------------------------------------------->
+                <div class="box" onclick="toggleText(5)"> <!-- schrit 1 box hinzufügen +1 box machen wen bennötigt -->
+                    Was ist Replenish
+                </div>
             </div>
         </div>
         
@@ -71,11 +74,21 @@
                 <div class="text-box" id="textBox4">
                     <H1 class="überschrift">Was ist Experience?</H1>
                     <hr class="linie">
-                    <p id="textToCopy4" class="texte">Text für Box 4, den du kopieren kannst.</p>
+                    <p id="textToCopy4" class="texte">Von Experience gibt es 3 Stufen,
+                         und jede Stufe sorgt dafür, 
+                         dass 10% mehr Erfahrungspunkte pro Level droppen.</p>
                     <button class="copy-button" onclick="copyText('textToCopy4', this)">Text kopieren</button> <!--Schrit 2 funktionen hinzufügen +1 box machen wen bennötigt -->
                     <span class="counter" id="counter4">0</span>
                 </div>
                 <!---------------------------------------------------------------------------------------------------------------------------->
+                <div class="text-box" id="textBox5">
+                    <H1 class="überschrift">Was ist Replenish?</H1>
+                    <hr class="linie">
+                    <p id="textToCopy5" class="texte">Replenish kommt auf die Hoe und sorgt dafür, 
+                        dass Nutzpflanzen nach dem Ernten automatisch nachgepflanzt werden.</p>
+                    <button class="copy-button" onclick="copyText('textToCopy5', this)">Text kopieren</button> <!--Schrit 2 funktionen hinzufügen +1 box machen wen bennötigt -->
+                    <span class="counter" id="counter5">0</span>
+                </div>
             </div>
         
             <button id="resetButton" onclick="resetCounters()">Statics Reset

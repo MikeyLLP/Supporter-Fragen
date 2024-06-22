@@ -28,6 +28,7 @@ let counter3 = parseInt(localStorage.getItem('counter3')) || 0;
 let counter4 = parseInt(localStorage.getItem('counter4')) || 0; // Falls weitere Boxen hinzugefügt werden       
 /*  Hier neue box hinzufügen /\ */                                              /* /\ */
 /* --------------------------------------------------------------------------------------------- */
+let counter5 = parseInt(localStorage.getItem('counter5')) || 0;
 // Funktion zum Anzeigen der gespeicherten Counter
 function displayCounters() {
     document.getElementById('counter1').innerText = counter1;
@@ -35,7 +36,8 @@ function displayCounters() {
     document.getElementById('counter3').innerText = counter3;
 /* --------------------------------------------------------------------------------------------- */
     document.getElementById('counter4').innerText = counter4; // Falls weitere Boxen hinzugefügt werden
-    /*  Hier neue box hinzufügen /\ */                                  /* /\ */
+    /*  Hier neue box hinzufügen /\ */  
+    document.getElementById('counter5').innerText = counter5;                                /* /\ */
 }
 /* --------------------------------------------------------------------------------------------- */
 // Anzeige der gespeicherten Counter beim Laden der Seite
@@ -88,6 +90,11 @@ function copyText(id, button) {
             document.getElementById('counter4').innerText = counter4;
         }// +1 box machen wen bennötigt
 /* --------------------------------------------------------------------------------------------- */
+        else if (id === 'textToCopy5') {
+            counter5++;
+            localStorage.setItem('counter5', counter5);
+            document.getElementById('counter5').innerText = counter5;
+        }
     }).catch(function(err) {
         console.error('Konnte den Text nicht kopieren: ', err);
     });
@@ -101,13 +108,14 @@ function downloadCounters() {
     textContent += `| Anzahl an Kopien für jene Frage       |\n`;
     textContent += `+---------------------------------------+\n`;
     textContent += `| Wan welche Events wurde: ${counter1}\n`;
-    textContent += `| Counter für Box 2: ${counter2}\n`;
-    textContent += `| Counter für Box 3: ${counter3}\n`;
+    textContent += `| Wie sieht eine Op-Fishing Rod aus: ${counter2}\n`;
+    textContent += `| Warum keine Villager: ${counter3}\n`;
 /* --------------------------------------------------------------------------------------------- */
-    textContent += `| Counter für Box 4: ${counter4}\n`; // Falls weitere Boxen hinzugefügt werden    +1 box machen wen bennötigt
+    textContent += `| Was ist Experience: ${counter4}\n`; // Falls weitere Boxen hinzugefügt werden    +1 box machen wen bennötigt
 /* --------------------------------------------------------------------------------------------- */
+    textContent += `| Was ist Replenish: ${counter5}\n`;
     textContent += `+---------------------------------------+\n`;
-    textContent += `| Erstellt am: ${formattedTimestamp}      |\n`;
+    textContent += `| Erstellt am: ${formattedTimestamp}       |\n`;
     textContent += `+---------------------------------------+\n`;
 
     // Erstelle ein Blob mit dem Textinhalt
@@ -148,6 +156,7 @@ function resetCounters() {
 /* --------------------------------------------------------------------------------------------- */
         localStorage.removeItem('counter4'); // Falls weitere Boxen hinzugefügt werden +1 box machen wen bennötigt
 /* --------------------------------------------------------------------------------------------- */
+        localStorage.removeItem('counter5');
         
         counter1 = 0;
         counter2 = 0;
@@ -155,6 +164,7 @@ function resetCounters() {
         /* --------------------------------------------------------------------------------------------- */
         counter4 = 0; // Falls weitere Boxen hinzugefügt werden +1 box machen wen bennötigt
         /* --------------------------------------------------------------------------------------------- */
+        counter5 = 0;
         displayCounters();
         
         // Ändere den Reset-Button-Stil nach dem Klicken
