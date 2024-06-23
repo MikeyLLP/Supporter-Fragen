@@ -14,7 +14,7 @@ Noch unbekannt.
 
 ## Beitrag
 
-Dies ist ein privates Projekt. Verbesserungsvorschläge werden angenommen.
+Dies ist ein privates Projekt. Verbesserungsvorschläge können durch anfragen angennomen werden.
 
 ## Lizenz
 

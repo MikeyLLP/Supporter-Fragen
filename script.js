@@ -29,7 +29,13 @@ let counter4 = parseInt(localStorage.getItem('counter4')) || 0; // Falls weitere
 /*  Hier neue box hinzufügen /\ */                                              /* /\ */
 /* --------------------------------------------------------------------------------------------- */
 let counter5 = parseInt(localStorage.getItem('counter5')) || 0;
-// Funktion zum Anzeigen der gespeicherten Counter
+let counter6 = parseInt(localStorage.getItem('counter6')) || 0;
+let counter7 = parseInt(localStorage.getItem('counter7')) || 0;
+let counter8 = parseInt(localStorage.getItem('counter8')) || 0;
+let counter9 = parseInt(localStorage.getItem('counter9')) || 0;
+
+
+// zum Anzeigen der gespeicherten Counters
 function displayCounters() {
     document.getElementById('counter1').innerText = counter1;
     document.getElementById('counter2').innerText = counter2;
@@ -37,9 +43,14 @@ function displayCounters() {
 /* --------------------------------------------------------------------------------------------- */
     document.getElementById('counter4').innerText = counter4; // Falls weitere Boxen hinzugefügt werden
     /*  Hier neue box hinzufügen /\ */  
-    document.getElementById('counter5').innerText = counter5;                                /* /\ */
-}
 /* --------------------------------------------------------------------------------------------- */
+    document.getElementById('counter5').innerText = counter5;
+    document.getElementById('counter6').innerText = counter6;
+    document.getElementById('counter7').innerText = counter7;
+    document.getElementById('counter8').innerText = counter8;
+    document.getElementById('counter9').innerText = counter9;
+}
+
 // Anzeige der gespeicherten Counter beim Laden der Seite
 displayCounters();
 
@@ -94,6 +105,26 @@ function copyText(id, button) {
             counter5++;
             localStorage.setItem('counter5', counter5);
             document.getElementById('counter5').innerText = counter5;
+        } 
+        else if (id === 'textToCopy6') {
+            counter6++;
+            localStorage.setItem('counter6', counter6);
+            document.getElementById('counter6').innerText = counter6;
+        }
+        else if (id === 'textToCopy7') {
+            counter7++;
+            localStorage.setItem('counter7', counter7);
+            document.getElementById('counter7').innerText = counter7;
+        }
+        else if (id === 'textToCopy8') {
+            counter8++;
+            localStorage.setItem('counter8', counter8);
+            document.getElementById('counter8').innerText = counter8;
+        }
+        else if (id === 'textToCopy9') {
+            counter9++;
+            localStorage.setItem('counter9', counter9);
+            document.getElementById('counter9').innerText = counter9;
         }
     }).catch(function(err) {
         console.error('Konnte den Text nicht kopieren: ', err);
@@ -107,13 +138,17 @@ function downloadCounters() {
     let textContent = `+---------------------------------------+\n`;
     textContent += `| Anzahl an Kopien für jene Frage       |\n`;
     textContent += `+---------------------------------------+\n`;
-    textContent += `| Wan welche Events wurde: ${counter1}\n`;
-    textContent += `| Wie sieht eine Op-Fishing Rod aus: ${counter2}\n`;
-    textContent += `| Warum keine Villager: ${counter3}\n`;
+    textContent += `| Wan welche Events wurde: ${counter1}            |\n`;
+    textContent += `| Wie sieht eine Op-Fishing Rod aus: ${counter2}  |\n`;
+    textContent += `| Warum keine Villager: ${counter3}               |\n`;
 /* --------------------------------------------------------------------------------------------- */
-    textContent += `| Was ist Experience: ${counter4}\n`; // Falls weitere Boxen hinzugefügt werden    +1 box machen wen bennötigt
+    textContent += `| Was ist Experience: ${counter4}                 |\n`; // Falls weitere Boxen hinzugefügt werden    +1 box machen wen bennötigt
 /* --------------------------------------------------------------------------------------------- */
-    textContent += `| Was ist Replenish: ${counter5}\n`;
+    textContent += `| Was ist Replenish: ${counter5}                  |\n`;
+    textContent += `| Was ist Soulbound: ${counter6}                  |\n`;
+    textContent += `| Was ist Telekinesis: ${counter7}                |\n`;
+    textContent += `| Was ist Beheading: ${counter8}                  |\n`;
+    textContent += `| Was ist Silent Gaze: ${counter9}                |\n`;
     textContent += `+---------------------------------------+\n`;
     textContent += `| Erstellt am: ${formattedTimestamp}       |\n`;
     textContent += `+---------------------------------------+\n`;
@@ -157,6 +192,10 @@ function resetCounters() {
         localStorage.removeItem('counter4'); // Falls weitere Boxen hinzugefügt werden +1 box machen wen bennötigt
 /* --------------------------------------------------------------------------------------------- */
         localStorage.removeItem('counter5');
+        localStorage.removeItem('counter6');
+        localStorage.removeItem('counter7');
+        localStorage.removeItem('counter8');
+        localStorage.removeItem('counter9');
         
         counter1 = 0;
         counter2 = 0;
@@ -165,6 +204,10 @@ function resetCounters() {
         counter4 = 0; // Falls weitere Boxen hinzugefügt werden +1 box machen wen bennötigt
         /* --------------------------------------------------------------------------------------------- */
         counter5 = 0;
+        counter6 = 0;
+        counter7 = 0;
+        counter8 = 0;
+        counter9 = 0;
         displayCounters();
         
         // Ändere den Reset-Button-Stil nach dem Klicken
