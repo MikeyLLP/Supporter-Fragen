@@ -228,6 +228,7 @@ const aliases = {
     8: ["was ist", "Beheading", "Enchantmens", "Enchantment", "Enchantments"],
     9: ["was ist", "Silent Gaze", "Enchantmens", "Enchantment", "Enchantments"],
     
+    
 };
 
 function searchBoxes() {
