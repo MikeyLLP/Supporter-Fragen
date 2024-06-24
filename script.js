@@ -268,7 +268,7 @@ function resetCounters() {
         counter13 = 0;
         counter14 = 0;
         counter15 = 0;
-        
+
         displayCounters();
         
         // Ändere den Reset-Button-Stil nach dem Klicken
@@ -288,6 +288,12 @@ const aliases = {
     7: ["was ist", "Telekinesis", "Enchantmens", "Enchantment", "Enchantments"],
     8: ["was ist", "Beheading", "Enchantmens", "Enchantment", "Enchantments"],
     9: ["was ist", "Silent Gaze", "Enchantmens", "Enchantment", "Enchantments"],
+    10: ["aliases"],
+    11: ["aliases"],
+    12: ["aliases"],
+    13: ["aliases"],
+    14: ["aliases"],
+    15: ["aliases"],
     
     
 };
