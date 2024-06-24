@@ -213,8 +213,43 @@ function resetCounters() {
         // Ändere den Reset-Button-Stil nach dem Klicken
         document.getElementById('resetButton').style.backgroundColor = '#4caf50'; // Grün einfärben
         setTimeout(function() {
-            document.getElementById('resetButton').style.backgroundColor = '#2a6bf6'; // Zurücksetzen auf ursprüngliche Farbe
-        }, 500); // Zurücksetzen nach 0,5 Sekunden
+            document.getElementById('resetButton').style.backgroundColor = '#2a6bf6'; 
+        }, 500);
+    }
+}
+const aliases = {
+    1: ["events", "wann", "welche events"],
+    2: ["fishing", "rod", "angeln"],
+    3: ["Villagers", "keine villager", "Villis"],
+    4: ["was ist", "Experience", "Enchantmens", "Enchantment", "Enchantments"],
+    5: ["was ist", "Replenish", "Enchantmens", "Enchantment", "Enchantments"],
+    6: ["was ist", " Soulbound", "Enchantmens", "Enchantment", "Enchantments"],
+    7: ["was ist", "Telekinesis", "Enchantmens", "Enchantment", "Enchantments"],
+    8: ["was ist", "Beheading", "Enchantmens", "Enchantment", "Enchantments"],
+    9: ["was ist", "Silent Gaze", "Enchantmens", "Enchantment", "Enchantments"],
+    
+};
+
+function searchBoxes() {
+    var input, filter, container, boxes, box, i, txtValue;
+    input = document.getElementById('search-bar');
+    filter = input.value.toLowerCase();
+    container = document.getElementsByClassName('container')[0];
+    boxes = container.getElementsByClassName('box');
+    
+    for (i = 0; i < boxes.length; i++) {
+        box = boxes[i];
+        txtValue = box.textContent || box.innerText;
+        let boxId = box.getAttribute('data-id');
+        let aliasList = aliases[boxId];
+        
+        let matchFound = aliasList.some(alias => alias.toLowerCase().includes(filter));
+        
+        if (txtValue.toLowerCase().indexOf(filter) > -1 || matchFound) {
+            box.style.display = "";
+        } else {
+            box.style.display = "none";
+        }
     }
 }
 

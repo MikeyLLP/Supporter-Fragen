@@ -25,34 +25,35 @@
                 </div>
               </div>
         <div class="outer-container">
+            <input type="text" id="search-bar" onkeyup="searchBoxes()" placeholder="Worum gehts?">
             <div class="container">
-                <div class="box" onclick="toggleText(1)">
+                <div class="box" data-id="1" onclick="toggleText(1)">
                     Wann welche Events
                 </div>
-                <div class="box" onclick="toggleText(2)">
+                <div class="box" data-id="2" onclick="toggleText(2)">
                     Op-Fishing Rod
                 </div>
-                <div class="box" onclick="toggleText(3)">
+                <div class="box" data-id="3" onclick="toggleText(3)">
                     Warum keine Villager
                 </div>
                 <!---------------------------------------------------------------------------------------------------------------------------->
-                <div class="box" onclick="toggleText(4)"> <!-- schrit 1 box hinzufügen +1 box machen wen bennötigt -->
+                <div class="box" data-id="4" onclick="toggleText(4)"> <!-- schrit 1 box hinzufügen +1 box machen wen bennötigt -->
                     Was ist Experience
                 </div>
                 <!---------------------------------------------------------------------------------------------------------------------------->
-                <div class="box" onclick="toggleText(5)"> 
+                <div class="box" data-id="5" onclick="toggleText(5)"> 
                     Was ist Replenish
                 </div>
-                <div class="box" onclick="toggleText(6)"> 
+                <div class="box" data-id="6" onclick="toggleText(6)"> 
                     Was ist Soulbound
                 </div>
-                <div class="box" onclick="toggleText(7)"> 
+                <div class="box" data-id="7" onclick="toggleText(7)"> 
                     Was ist Telekinesis
                 </div>
-                <div class="box" onclick="toggleText(8)"> 
+                <div class="box" data-id="8" onclick="toggleText(8)"> 
                     Was ist Beheading
                 </div>
-                <div class="box" onclick="toggleText(9)"> 
+                <div class="box" data-id="9" onclick="toggleText(9)"> 
                     Was ist Silent Gaze
                 </div>
             </div>
@@ -136,9 +137,9 @@
                     <button class="copy-button" onclick="copyText('textToCopy9', this)">Text kopieren</button>
                     <span class="counter" id="counter9">0</span>
                 </div>
-
+                
             </div>
-        
+
             <button id="resetButton" onclick="resetCounters()">Statics Reset
                 <br><span class="material-symbols-outlined"><img class="icons-reset" src="Icons/device_reset.png" alt="device_png"></button>
 
