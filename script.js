@@ -33,6 +33,12 @@ let counter6 = parseInt(localStorage.getItem('counter6')) || 0;
 let counter7 = parseInt(localStorage.getItem('counter7')) || 0;
 let counter8 = parseInt(localStorage.getItem('counter8')) || 0;
 let counter9 = parseInt(localStorage.getItem('counter9')) || 0;
+let counter10 = parseInt(localStorage.getItem('counter10')) || 0;
+let counter11 = parseInt(localStorage.getItem('counter11')) || 0;
+let counter12 = parseInt(localStorage.getItem('counter12')) || 0;
+let counter13 = parseInt(localStorage.getItem('counter13')) || 0;
+let counter14 = parseInt(localStorage.getItem('counter14')) || 0;
+let counter15 = parseInt(localStorage.getItem('counter15')) || 0;
 
 
 // zum Anzeigen der gespeicherten Counters
@@ -49,6 +55,12 @@ function displayCounters() {
     document.getElementById('counter7').innerText = counter7;
     document.getElementById('counter8').innerText = counter8;
     document.getElementById('counter9').innerText = counter9;
+    document.getElementById('counter10').innerText = counter10;
+    document.getElementById('counter11').innerText = counter11;
+    document.getElementById('counter12').innerText = counter12;
+    document.getElementById('counter13').innerText = counter13;
+    document.getElementById('counter14').innerText = counter14;
+    document.getElementById('counter15').innerText = counter15;
 }
 
 // Anzeige der gespeicherten Counter beim Laden der Seite
@@ -126,6 +138,36 @@ function copyText(id, button) {
             localStorage.setItem('counter9', counter9);
             document.getElementById('counter9').innerText = counter9;
         }
+        else if (id === 'textToCopy10') {
+            counter10++;
+            localStorage.setItem('counter10', counter10);
+            document.getElementById('counter10').innerText = counter10;
+        }
+        else if (id === 'textToCopy11') {
+            counter11++;
+            localStorage.setItem('counter11', counter11);
+            document.getElementById('counter11').innerText = counter11;
+        }
+        else if (id === 'textToCopy12') {
+            counter12++;
+            localStorage.setItem('counter12', counter12);
+            document.getElementById('counter12').innerText = counter12;
+        }
+        else if (id === 'textToCopy13') {
+            counter13++;
+            localStorage.setItem('counter13', counter13);
+            document.getElementById('counter13').innerText = counter13;
+        }
+        else if (id === 'textToCopy14') {
+            counter14++;
+            localStorage.setItem('counter14', counter14);
+            document.getElementById('counter14').innerText = counter14;
+        }
+        else if (id === 'textToCopy15') {
+            counter15++;
+            localStorage.setItem('counter15', counter15);
+            document.getElementById('counter15').innerText = counter15;
+        }
     }).catch(function(err) {
         console.error('Konnte den Text nicht kopieren: ', err);
     });
@@ -149,6 +191,12 @@ function downloadCounters() {
     textContent += `| Was ist Telekinesis: ${counter7}                |\n`;
     textContent += `| Was ist Beheading: ${counter8}                  |\n`;
     textContent += `| Was ist Silent Gaze: ${counter9}                |\n`;
+    textContent += `| Text: ${counter10}                              |\n`;
+    textContent += `| Text: ${counter11}                              |\n`;
+    textContent += `| Text: ${counter12}                              |\n`;
+    textContent += `| Text: ${counter13}                              |\n`;
+    textContent += `| Text: ${counter14}                              |\n`;
+    textContent += `| Text: ${counter15}                              |\n`;
     textContent += `+---------------------------------------+\n`;
     textContent += `| Erstellt am: ${formattedTimestamp}       |\n`;
     textContent += `+---------------------------------------+\n`;
@@ -196,6 +244,12 @@ function resetCounters() {
         localStorage.removeItem('counter7');
         localStorage.removeItem('counter8');
         localStorage.removeItem('counter9');
+        localStorage.removeItem('counter10');
+        localStorage.removeItem('counter11');
+        localStorage.removeItem('counter12');
+        localStorage.removeItem('counter13');
+        localStorage.removeItem('counter14');
+        localStorage.removeItem('counter15');
         
         counter1 = 0;
         counter2 = 0;
@@ -208,6 +262,13 @@ function resetCounters() {
         counter7 = 0;
         counter8 = 0;
         counter9 = 0;
+        counter10 = 0;
+        counter11 = 0;
+        counter12 = 0;
+        counter13 = 0;
+        counter14 = 0;
+        counter15 = 0;
+        
         displayCounters();
         
         // Ändere den Reset-Button-Stil nach dem Klicken
