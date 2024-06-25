@@ -191,9 +191,9 @@ function downloadCounters() {
     textContent += `| Was ist Telekinesis: ${counter7}                |\n`;
     textContent += `| Was ist Beheading: ${counter8}                  |\n`;
     textContent += `| Was ist Silent Gaze: ${counter9}                |\n`;
-    textContent += `| Text: ${counter10}                               |\n`;
-    textContent += `| Text: ${counter11}                               |\n`;
-    textContent += `| Text: ${counter12}                               |\n`;
+    textContent += `| Was ist Rocket Saver: ${counter10}               |\n`;
+    textContent += `| Hat man als Veteran Vorteile: ${counter11}       |\n`;
+    textContent += `| Wie wird man Veteran: ${counter12}               |\n`;
     textContent += `| Text: ${counter13}                               |\n`;
     textContent += `| Text: ${counter14}                               |\n`;
     textContent += `| Text: ${counter15}                               |\n`;
@@ -288,9 +288,9 @@ const aliases = {
     7: ["was ist", "Telekinesis", "Enchantmens", "Enchantment", "Enchantments"],
     8: ["was ist", "Beheading", "Enchantmens", "Enchantment", "Enchantments"],
     9: ["was ist", "Silent Gaze", "Enchantmens", "Enchantment", "Enchantments"],
-    10: ["aliases"],
-    11: ["aliases"],
-    12: ["aliases"],
+    10: ["was ist", "Rocket Saver", "Enchantmens", "Enchantment", "Enchantments"],
+    11: ["Veteran", "Vorteile", "Ränge", "Rang"],
+    12: ["Veteran", "Wie wird", "Ränge", "Rang", "bekommen"],
     13: ["aliases"],
     14: ["aliases"],
     15: ["aliases"],
