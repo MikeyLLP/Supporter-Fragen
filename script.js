@@ -198,7 +198,7 @@ function downloadCounters() {
     textContent += `| Text: ${counter14}                               |\n`;
     textContent += `| Text: ${counter15}                               |\n`;
     textContent += `+---------------------------------------+\n`;
-    textContent += `| Erstellt am: ${formattedTimestamp}       |\n`;
+    textContent += `| Erstellt am: ${formattedTimestamp}        |\n`;
     textContent += `+---------------------------------------+\n`;
 
     // Erstelle ein Blob mit dem Textinhalt
