@@ -278,9 +278,10 @@ function resetCounters() {
         }, 500);
     }
 }
+
 const aliases = {
     1: ["events", "wann", "welche events"],
-    2: ["fishing", "rod", "angeln"],
+    2: ["fishing", "rod", "angeln", "OP"],
     3: ["Villagers", "keine villager", "Villis"],
     4: ["was ist", "Experience", "Enchantmens", "Enchantment", "Enchantments"],
     5: ["was ist", "Replenish", "Enchantmens", "Enchantment", "Enchantments"],
