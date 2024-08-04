@@ -20,6 +20,48 @@ if (document.cookie.includes("CookieBy=MikeyLLP")) {
     betaBox.classList.add("hide");
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('auswahl-boxen');
+
+    // Array mit verschiedenen Texten und Classnames
+    const boxes = [
+        { text: 'Wann welche Events', className: 'box' },
+        { text: 'Op-Fishing Rod', className: 'box' },
+        { text: 'Warum keine Villager', className: 'box' },
+        { text: ' Was ist Experience', className: 'box' },
+        { text: 'Was ist Replenish', className: 'box' },
+        { text: 'Was ist Soulbound', className: 'box' },
+        { text: 'Was ist Telekinesis', className: 'box' },
+        { text: 'Was ist Beheading', className: 'box' },
+        { text: 'Was ist Silent Gaze', className: 'box' },
+        { text: 'Was ist Rocket Saver', className: 'box' },
+        { text: 'Hat man als Veteran Vorteile', className: 'box' },
+        { text: 'Wie wird man Veteran', className: 'box' },
+        { text: 'Beschreibung', className: 'box hiden' },
+        { text: 'Beschreibung', className: 'box hiden' },
+        { text: 'Beschreibung', className: 'box hiden' },
+        { text: 'Beschreibung', className: 'box hiden' },
+        { text: 'Beschreibung', className: 'box hiden' },
+        { text: 'Beschreibung', className: 'box hiden' },
+        { text: 'Beschreibung', className: 'box hiden' },
+        { text: 'Beschreibung', className: 'box hiden' }
+    ];
+
+    // Schleife zum Erstellen der Boxen
+    boxes.forEach((boxData, index) => {
+        const box = document.createElement('div');
+        box.className = `box hidden ${boxData.className}`;
+        box.dataset.id = index + 1;
+        box.textContent = boxData.text;
+        box.onclick = () => toggleText(index + 1);
+        container.appendChild(box);
+    });
+});
+
+function toggleText(id) {
+    const box = document.querySelector(`.box[data-id='${id}']`);
+    box.classList.toggle('hidden');
+}
 
 
 function toggleText(boxNumber) {
