@@ -25,26 +25,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Array mit verschiedenen Texten und Classnames
     const boxes = [
-        { text: 'Wann welche Events', className: 'box' },
-        { text: 'Op-Fishing Rod', className: 'box' },
-        { text: 'Warum keine Villager', className: 'box' },
-        { text: ' Was ist Experience', className: 'box' },
-        { text: 'Was ist Replenish', className: 'box' },
-        { text: 'Was ist Soulbound', className: 'box' },
-        { text: 'Was ist Telekinesis', className: 'box' },
-        { text: 'Was ist Beheading', className: 'box' },
-        { text: 'Was ist Silent Gaze', className: 'box' },
-        { text: 'Was ist Rocket Saver', className: 'box' },
-        { text: 'Hat man als Veteran Vorteile', className: 'box' },
-        { text: 'Wie wird man Veteran', className: 'box' },
-        { text: 'Beschreibung', className: 'box hiden' },
-        { text: 'Beschreibung', className: 'box hiden' },
-        { text: 'Beschreibung', className: 'box hiden' },
-        { text: 'Beschreibung', className: 'box hiden' },
-        { text: 'Beschreibung', className: 'box hiden' },
-        { text: 'Beschreibung', className: 'box hiden' },
-        { text: 'Beschreibung', className: 'box hiden' },
-        { text: 'Beschreibung', className: 'box hiden' }
+        { text: 'Wann welche Events', className: 'box', category: 'Community Server' },
+        { text: 'Op-Fishing Rod', className: 'box', category: 'Community Server'},
+        { text: 'Warum keine Villager', className: 'box', category: 'Community Server' },
+        { text: 'Was ist Experience', className: 'box', category: 'Community Server' },
+        { text: 'Was ist Replenish', className: 'box', category: 'Community Server' },
+        { text: 'Was ist Soulbound', className: 'box', category: 'Community Server'},
+        { text: 'Was ist Telekinesis', className: 'box', category: 'Community Server'},
+        { text: 'Was ist Beheading', className: 'box', category: 'Community Server'},
+        { text: 'Was ist Silent Gaze', className: 'box', category: 'Community Server'},
+        { text: 'Was ist Rocket Saver', className: 'box', category: 'Community Server'},
+        { text: 'Hat man als Veteran Vorteile', className: 'box', category: 'Alle'},
+        { text: 'Wie wird man Veteran', className: 'box', category: 'Alle'},
+        { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
+        { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
+        { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
+        { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
+        { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
+        { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
+        { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
+        { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'}
     ];
 
     // Schleife zum Erstellen der Boxen
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const box = document.createElement('div');
         box.className = `box hidden ${boxData.className}`;
         box.dataset.id = index + 1;
+        box.dataset.category = boxData.category;
         box.textContent = boxData.text;
         box.onclick = () => toggleText(index + 1);
         container.appendChild(box);
@@ -67,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Wann welche Events?', 'Wie sieht eine Op-Fishing Rod aus?', 'Warum keine Villager?',
         'Was ist Experience?', 'Was ist Replenish?', 'Was ist Soulbound?',
         'Was ist Telekinesis?', 'Was ist Beheading?', 'Was ist Silent Gaze?',
-        '>Was ist Rocket Saver?', 'Hat man als Veteran Vorteile?', 'Wie wird man Veteran?',
+        'Was ist Rocket Saver?', 'Hat man als Veteran Vorteile?', 'Wie wird man Veteran?',
         'Überschrift 13', 'Überschrift 14', 'Überschrift 15',
         'Überschrift 16', 'Überschrift 17', 'Überschrift 18',
         'Überschrift 19', 'Überschrift 20'
@@ -204,26 +205,36 @@ const aliases = {
     13: ["aliases"],
     14: ["aliases"],
     15: ["aliases"],
-    
-    
+    16: ["aliases"],
+    17: ["aliases"],
+    18: ["aliases"],
+    19: ["aliases"],
+    20: ["aliases"],
 };
 
 function searchBoxes() {
     var input, filter, container, boxes, box, i, txtValue;
     input = document.getElementById('search-bar');
     filter = input.value.toLowerCase();
-    container = document.getElementsByClassName('container')[0];
+    container = document.getElementById('auswahl-boxen');
     boxes = container.getElementsByClassName('box');
     
+    var selectedFilter = document.getElementById('filter-dropdown').value;
+
     for (i = 0; i < boxes.length; i++) {
         box = boxes[i];
         txtValue = box.textContent || box.innerText;
         let boxId = box.getAttribute('data-id');
-        let aliasList = aliases[boxId];
+        let aliasList = aliases[boxId] || [];
         
+        // Überprüfen, ob der Suchtext in den Aliasen enthalten ist
         let matchFound = aliasList.some(alias => alias.toLowerCase().includes(filter));
         
-        if (txtValue.toLowerCase().indexOf(filter) > -1 || matchFound) {
+        // Überprüfen, ob die Box dem ausgewählten Filter entspricht
+        let matchesFilter = selectedFilter === 'alle' || box.getAttribute('data-category') === selectedFilter;
+
+        // Überprüfen, ob die Box angezeigt werden soll
+        if ((txtValue.toLowerCase().indexOf(filter) > -1 || matchFound) && matchesFilter) {
             box.style.display = "";
         } else {
             box.style.display = "none";

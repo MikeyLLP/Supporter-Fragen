@@ -26,10 +26,14 @@
               </div>
         <div class="outer-container">
             
-            <div class="container">
-
+            <div class="container search-filter-container">
                 <input type="text" id="search-bar" onkeyup="searchBoxes()" placeholder="Worum gehts?">
-
+                <select id="filter-dropdown" class="filter-dropdown" onchange="searchBoxes()">
+                        <option value="alle">Alle</option>
+                        <option value="Ticket System">Ticket System</option>
+                        <option value="Event Server">Event Server</option>
+                        <option value="Community Server">Community Server</option>
+                    </select>
                 <div id="auswahl-boxen"></div>
                 
             </div>
