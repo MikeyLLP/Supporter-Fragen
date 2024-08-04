@@ -58,6 +58,98 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('text-box-container');
+
+    // Arrays mit verschiedenen Überschriften und Texten
+    const headings = [
+        'Wann welche Events?', 'Wie sieht eine Op-Fishing Rod aus?', 'Warum keine Villager?',
+        'Was ist Experience?', 'Was ist Replenish?', 'Was ist Soulbound?',
+        'Was ist Telekinesis?', 'Was ist Beheading?', 'Was ist Silent Gaze?',
+        '>Was ist Rocket Saver?', 'Hat man als Veteran Vorteile?', 'Wie wird man Veteran?',
+        'Überschrift 13', 'Überschrift 14', 'Überschrift 15',
+        'Überschrift 16', 'Überschrift 17', 'Überschrift 18',
+        'Überschrift 19', 'Überschrift 20'
+    ];
+
+    const texts = [
+        'Von Montag bis Freitag gibt es meistens um 20 Uhr ein 20-minütiges Mining-Event. Angel-Events finden samstags und sonntags ebenfalls um 20 Uhr für 20 Minuten statt.',
+        'Eine Op-Fishing Rod besteht aus Unbraking 3 ,Luck of the see 3 ,Lure 3 ,Mending...',
+        'Auf dem Server gibt es keine Villager, weil sie viel zu OP sind und man durch sie zu schnell an alle benötigten Items kommt. Das würde den Spaß am Spiel nehmen.',
+        'Von Experience gibt es 3 Stufen, und jede Stufe sorgt dafür,  dass 10% mehr Erfahrungspunkte pro Level droppen.',
+        'Replenish kommt auf die Hoe und sorgt dafür, dass Nutzpflanzen nach dem Ernten automatisch nachgepflanzt werden.',
+        'Soulbound kann auf alle Rüstungen und Werkzeuge angewendet werden und sorgt dafür, dass das Item nach deinem Tod in deinem Inventar bleibt.',
+        'Telekinesis kann auf alle Werkzeuge angewendet werden und sorgt dafür, dass Drops und Erfahrung direkt in dein Inventar gehen.',
+        'Beheading erhöht die Chance, einen Mob-Kopf zu erhalten, um 2% pro Level. Es kann auf Schwerter, Äxte, Bögen und Dreizacke angewendet werden und hat drei Stufen.', 
+        'Silent Gaze macht, dass Endermäner nicht aggressiv werden, wenn du sie anschaust. Silent Gaze kann nur auf den Helm gepackt werden.',
+        'Rocket Saver kann nur auf die Elytra angewendet werden und erhöht die Wahrscheinlichkeit um +15% pro Level, dass du keine Rakete verbrauchst.',
+        'Nein, als Veteran hat man keine großen Vorteile. Man kann dennoch den Server betreten, obwohl er schon voll ist.',
+        'Spieler, welche auf dem 1.20 Server mehr als 200 Stunden aktive Spielzeit hatten werden Veteran.',
+        'Text 13', 
+        'Text 14', 
+        'Text 15',
+        'Text 16', 
+        'Text 17', 
+        'Text 18',
+        'Text 19', 
+        'Text 20'
+    ];
+
+    // Schleife zum Erstellen der Boxen
+    for (let i = 0; i < 20; i++) {
+        // Erstelle die Hauptbox
+        const textBox = document.createElement('div');
+        textBox.className = 'text-box';
+        textBox.id = `textBox${i + 1}`;
+
+        // Erstelle die Überschrift
+        const heading = document.createElement('h1');
+        heading.className = 'überschrift';
+        heading.textContent = headings[i];
+        textBox.appendChild(heading);
+
+        // Erstelle die Linie
+        const line = document.createElement('hr');
+        line.className = 'linie';
+        textBox.appendChild(line);
+
+        // Erstelle den Textabschnitt
+        const textParagraph = document.createElement('p');
+        textParagraph.id = `textToCopy${i + 1}`;
+        textParagraph.className = 'texte';
+        textParagraph.textContent = texts[i];
+        textBox.appendChild(textParagraph);
+
+        // Erstelle den Button
+        const copyButton = document.createElement('button');
+        copyButton.className = 'copy-button';
+        copyButton.textContent = 'Text kopieren';
+        copyButton.onclick = () => copyText(`textToCopy${i + 1}`, copyButton);
+        textBox.appendChild(copyButton);
+
+        // Füge die Box dem Container hinzu
+        container.appendChild(textBox);
+    }
+});
+
+// Funktion zum Kopieren des Textes
+function copyText(textId, button) {
+    const textElement = document.getElementById(textId);
+    const range = document.createRange();
+    range.selectNode(textElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    try {
+        document.execCommand('copy');
+        alert('Text kopiert!');
+    } catch (err) {
+        alert('Kopieren fehlgeschlagen!');
+    }
+    window.getSelection().removeAllRanges();
+}
+
+
 function toggleText(id) {
     const box = document.querySelector(`.box[data-id='${id}']`);
     box.classList.toggle('hidden');
