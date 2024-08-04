@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Array mit verschiedenen Texten und Classnames
     const boxes = [
+        { text: 'Falsches Ticket (Unban)', className: 'box', category: 'Ticket System'},
+        { text: '1.21 Server Nicht da', className: 'box', category: 'Ticket System'},
         { text: 'Wann welche Events', className: 'box', category: 'Community Server' },
         { text: 'Op-Fishing Rod', className: 'box', category: 'Community Server'},
         { text: 'Warum keine Villager', className: 'box', category: 'Community Server' },
@@ -37,8 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'Was ist Rocket Saver', className: 'box', category: 'Community Server'},
         { text: 'Hat man als Veteran Vorteile', className: 'box', category: 'Alle'},
         { text: 'Wie wird man Veteran', className: 'box', category: 'Alle'},
-        { text: 'Falsches Ticket Unban', className: 'box', category: 'Ticket System'},
-        { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
         { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
         { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
         { text: 'Beschreibung', className: 'box hiden', category: 'unbekannt'},
@@ -65,16 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Arrays mit verschiedenen Überschriften und Texten
     const headings = [
-        'Wann welche Events?', 'Wie sieht eine Op-Fishing Rod aus?', 'Warum keine Villager?',
+        'Falsches Ticket (Unban)', '1.21 Server Nicht da', 'Wann welche Events?', 
+        'Wie sieht eine Op-Fishing Rod aus?', 'Warum keine Villager?',
         'Was ist Experience?', 'Was ist Replenish?', 'Was ist Soulbound?',
         'Was ist Telekinesis?', 'Was ist Beheading?', 'Was ist Silent Gaze?',
-        'Was ist Rocket Saver?', 'Hat man als Veteran Vorteile?', 'Wie wird man Veteran?',
-        'Überschrift 13', 'Überschrift 14', 'Überschrift 15',
+        'Was ist Rocket Saver?', 'Hat man als Veteran Vorteile?', 'Wie wird man Veteran?', 'Überschrift 15',
         'Überschrift 16', 'Überschrift 17', 'Überschrift 18',
         'Überschrift 19', 'Überschrift 20'
     ];
 
     const texts = [
+        'Das ist leider nicht der richtige Ticket-Typ. Der Support kann leider nicht helfen. Bitte eröffne ein anderes Ticket mit dem Typ "Unban Ticket".', 
+        'Im Moment können keine Anfragen angenommen werden, da der Server vorübergehend geschlossen ist. Bitte versuche es erneut, wenn der Minecraft-Community Server für die 1.21 da ist. Falls du aber Probleme hast, Eröffne bitte ein Event Support Ticket.',
         'Von Montag bis Freitag gibt es meistens um 20 Uhr ein 20-minütiges Mining-Event. Angel-Events finden samstags und sonntags ebenfalls um 20 Uhr für 20 Minuten statt.',
         'Eine Op-Fishing Rod besteht aus Unbraking 3 ,Luck of the see 3 ,Lure 3 ,Mending...',
         'Auf dem Server gibt es keine Villager, weil sie viel zu OP sind und man durch sie zu schnell an alle benötigten Items kommt. Das würde den Spaß am Spiel nehmen.',
@@ -87,8 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'Rocket Saver kann nur auf die Elytra angewendet werden und erhöht die Wahrscheinlichkeit um +15% pro Level, dass du keine Rakete verbrauchst.',
         'Nein, als Veteran hat man keine großen Vorteile. Man kann dennoch den Server betreten, obwohl er schon voll ist.',
         'Spieler, welche auf dem 1.20 Server mehr als 200 Stunden aktive Spielzeit hatten werden Veteran.',
-        'Das ist leider nicht der richtige Ticket-Typ. Der Support kann leider nicht helfen. Bitte eröffne ein anderes Ticket mit dem Typ "Unban Ticket".', 
-        'Text 14', 
         'Text 15',
         'Text 16', 
         'Text 17', 
@@ -190,20 +190,20 @@ function copyText(id, button) {
 }
 
 const aliases = {
-    1: ["events", "wann", "welche events"],
-    2: ["fishing", "rod", "angeln", "OP"],
-    3: ["Villagers", "keine villager", "Villis"],
-    4: ["was ist", "Experience", "Enchantmens", "Enchantment", "Enchantments"],
-    5: ["was ist", "Replenish", "Enchantmens", "Enchantment", "Enchantments"],
-    6: ["was ist", " Soulbound", "Enchantmens", "Enchantment", "Enchantments"],
-    7: ["was ist", "Telekinesis", "Enchantmens", "Enchantment", "Enchantments"],
-    8: ["was ist", "Beheading", "Enchantmens", "Enchantment", "Enchantments"],
-    9: ["was ist", "Silent Gaze", "Enchantmens", "Enchantment", "Enchantments"],
-    10: ["was ist", "Rocket Saver", "Enchantmens", "Enchantment", "Enchantments"],
-    11: ["Veteran", "Vorteile", "Ränge", "Rang"],
-    12: ["Veteran", "Wie wird", "Ränge", "Rang", "bekommen"],
-    13: ["Unban", "Ticket", "Falsch", "Support"],
-    14: ["aliases"],
+    1: ["Unban", "Ticket", "Falsch", "Support"],
+    2: ["1.21", "Ticket", "Falsch", "White-List", "Support", "anderes"],
+    3: ["events", "wann", "welche events"],
+    4: ["fishing", "rod", "angeln", "OP"],
+    5: ["Villagers", "keine villager", "Villis"],
+    6: ["was ist", "Experience", "Enchantmens", "Enchantment", "Enchantments"],
+    7: ["was ist", "Replenish", "Enchantmens", "Enchantment", "Enchantments"],
+    8: ["was ist", " Soulbound", "Enchantmens", "Enchantment", "Enchantments"],
+    9: ["was ist", "Telekinesis", "Enchantmens", "Enchantment", "Enchantments"],
+    10: ["was ist", "Beheading", "Enchantmens", "Enchantment", "Enchantments"],
+    11: ["was ist", "Silent Gaze", "Enchantmens", "Enchantment", "Enchantments"],
+    12: ["was ist", "Rocket Saver", "Enchantmens", "Enchantment", "Enchantments"],
+    13: ["Veteran", "Vorteile", "Ränge", "Rang"],
+    14: ["Veteran", "Wie wird", "Ränge", "Rang", "bekommen"],
     15: ["aliases"],
     16: ["aliases"],
     17: ["aliases"],
