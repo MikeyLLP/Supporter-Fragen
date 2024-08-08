@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const boxes = [
         { text: 'Falsches Ticket (Unban)', className: 'box', category: 'Ticket System'},
         { text: '1.21 Server Nicht da', className: 'box', category: 'Ticket System'},
-        { text: 'Wann welche Events', className: 'box', category: 'Community Server' },
+        { text: 'Wann welche Events Survival Server', className: 'box', category: 'Community Server' },
         { text: 'Op-Fishing Rod', className: 'box', category: 'Community Server'},
         { text: 'Warum keine Villager', className: 'box', category: 'Community Server' },
         { text: 'Was ist Experience', className: 'box', category: 'Community Server' },
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Arrays mit verschiedenen Überschriften und Texten
     const headings = [
-        'Falsches Ticket (Unban)', '1.21 Server Nicht da', 'Wann welche Events?', 
+        'Falsches Ticket (Unban)', '1.21 Server Nicht da', 'Wann welche Events? Survival Server', 
         'Wie sieht eine Op-Fishing Rod aus?', 'Warum keine Villager?',
         'Was ist Experience?', 'Was ist Replenish?', 'Was ist Soulbound?',
         'Was ist Telekinesis?', 'Was ist Beheading?', 'Was ist Silent Gaze?',
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Rocket Saver kann nur auf die Elytra angewendet werden und erhöht die Wahrscheinlichkeit um +15% pro Level, dass du keine Rakete verbrauchst.',
         'Nein, als Veteran hat man keine großen Vorteile. Man kann dennoch den Server betreten, obwohl er schon voll ist.',
         'Spieler, welche auf dem 1.20 Server mehr als 200 Stunden aktive Spielzeit hatten werden Veteran.',
-        'Versuche es mal [hiermit](https://server.castcrafter.de/troubleshooting#-82g4sg_32) und gehe die Schritte bitte vollständig durch.',
+        'Versuche es mal **[hiermit](https://server.castcrafter.de/troubleshooting#-82g4sg_32)** und gehe die Schritte bitte vollständig durch.',
         'Text 16', 
         'Text 17', 
         'Text 18',
