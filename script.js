@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const texts = [
         'Das ist leider nicht der richtige Ticket-Typ. Der Support kann leider nicht helfen. Bitte eröffne ein anderes Ticket mit dem Typ "Unban Ticket".', 
-        'Im Moment können keine Anfragen angenommen werden, da der Server vorübergehend geschlossen ist. Bitte versuche es erneut, wenn der Minecraft-Community Server für die 1.21 da ist. Falls du aber Probleme hast, Eröffne bitte ein Event Support Ticket.',
+        'Im Moment können keine Anfragen angenommen werden, da der Server vorübergehend geschlossen ist. Bitte versuche es erneut, wenn der Minecraft-Community Server für die 1.21 verfügbar ist. Falls du aber Probleme hast, Eröffne bitte ein Event Support Ticket.',
         'Von Montag bis Freitag gibt es meistens um 20 Uhr ein 20-minütiges Mining-Event. Angel-Events finden samstags und sonntags ebenfalls um 20 Uhr für 20 Minuten statt.',
         'Eine Op-Fishing Rod besteht aus Unbraking 3 ,Luck of the see 3 ,Lure 3 ,Mending...',
         'Auf dem Server gibt es keine Villager, weil sie viel zu OP sind und man durch sie zu schnell an alle benötigten Items kommt. Das würde den Spaß am Spiel nehmen.',
